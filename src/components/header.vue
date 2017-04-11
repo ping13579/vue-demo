@@ -42,7 +42,7 @@ export default {
     height: 2.5rem;
     text-align: center;
     line-height: 2.5rem;
-    color: #fff;
+    color: #333;
     font-size: 1rem;
     background-color: #eee;
     position: fixed;
