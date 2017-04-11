@@ -1,7 +1,7 @@
 <template>
 <div class="header">
     <div v-show= "back" class="th-re" @click="onBackClick">
-        <i class="iconfont icon-jiantou-copy"></i>
+        <i class="iconfont"></i>
     </div>
     {{title}}
     <a class="th-menu" @click="onMenuClick">{{menu}}</a>
