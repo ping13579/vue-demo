@@ -98,6 +98,31 @@ a {
 }
 </style>
 ```
+mint-ui 使用说明
+```
+//安装
+# Vue 1.x
+npm install mint-ui@1 -S
+# Vue 2.0
+npm install mint-ui -S
+
+// 引入全部组件
+import Vue from 'vue';
+import Mint from 'mint-ui';
+Vue.use(Mint);
+
+// 按需引入部分组件
+import { Cell, Checklist } from 'minu-ui';
+Vue.component(Cell.name, Cell);
+Vue.component(Checklist.name, Checklist);
+
+、、切勿忘记引入样式
+
+import 'mint-ui/lib/style.css';
+样式引入可在公共地方。本项目在main.js里引入。。每次调用都不用特意再调用。。
+```
+
+
    -- 说明 --
  ```
 1、电脑上已安装node 及item。
@@ -108,5 +133,4 @@ a {
 6、下次再打开工程报错如： 'process-nextick-args'  此时重新 npm install node 即可（此坑研究了好久。终于解决。心好累啊。）。
 7、本工程用的 webpack+vue+sass 搭建。项目是我自己根据网上资料自己搭建的 里面都是一些案例。
    其中用到了路由，组件，vue基础语句等等。。
-8、本工程有个缺点。。工程启动后需要一分钟的时间才能看到页面。所以在此告诉大家以免大家各种焦虑。。
 ```

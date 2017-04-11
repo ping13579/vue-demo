@@ -1,5 +1,4 @@
 <template>
-
   <div class="demoList">
     <comHeader title="头部组件" back="true"></comHeader>
     <ul>
@@ -9,6 +8,7 @@
       <li><a :href='url4'>demoFour-bind</a></li>
       <li><a :href='url5'>demoFive-model</a></li>
     </ul>
+    <button class='showToast' v-on:click='showToast'>toast test</button>
     <comFooter></comFooter>
   </div>
 </template>
@@ -17,6 +17,7 @@
 
 import comHeader from '../components/header.vue';
 import comFooter from '../components/footer.vue';
+import { Indicator,Toast,MessageBox } from 'mint-ui';
 
 export default {
   name: 'demoList',
@@ -30,8 +31,20 @@ export default {
     }
   },
   components: {
-      comHeader,comFooter
+      comHeader,comFooter,Indicator,Toast,MessageBox
   },
+  methods:{
+      showToast:function(){
+        Toast('sdffffd');
+        Indicator.open('Loading...');
+        MessageBox({
+          title: '弹框测试',
+          message: '点击按钮即可关闭',
+          confirmButtonText:'我知道了'
+        });
+      },
+
+  }
 }
 </script>
 
