@@ -14,26 +14,6 @@
 
  ## 代码神兽、、、
 
-# hello
-
-## 全局安装 vue-cli
-```
-$ npm install --global vue-cli
-```
-## 创建一个基于 webpack 模板的新项目
-```
-$ vue init webpack my-project
-```
-## 安装依赖，走你
-
-```
-$ cd my-project
-$ npm install
-$ npm run dev
-```
-
-以上方法是自己本地创建vue + webpack 工程的方法。
-
 要是采用我的工程只需要git clone  仓库地址。
 
 然后cd 到目录下。再执行
@@ -51,4 +31,5 @@ $ npm run dev
 4、再执行npm run dev即可。
 5、打开文件后会出现js文件报错。点击灯泡标识，转换js格式。注：本人用的是webstrom 编辑器。
 6、下次再打开工程报错如： 'process-nextick-args'  此时重新 npm install node 即可（此坑研究了好久。终于解决。心好累啊。）。
+7、本工程用的 webpack+vue+sass 搭建。项目是我自己根据网上资料自己搭建的 里面都是一些案例。其中用到了路由，组件，vue基础语句等等。。
 ```
