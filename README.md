@@ -29,16 +29,6 @@ $ npm run dev
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h5>{{explain}}</h5>
-    <ul>
-      <li># 全局安装 vue-cli</li>
-      <li>$ npm install --global vue-cli</li>
-      <li># 创建一个基于 webpack 模板的新项目</li>
-      <li>$ vue init webpack my-project</li>
-      <li># 安装依赖，走你</li>
-      <li>$ cd my-project</li>
-      <li>$ npm install</li>
-      <li>$ npm run dev</li>
-    </ul>
     <h2> -- 说明 -- </h2>
     <ul>
       <li>1、电脑上已安装node 及item。 </li>
@@ -99,6 +89,7 @@ a {
 </style>
 ```
 mint-ui 使用说明
+
 ```
 //安装
 # Vue 1.x
@@ -122,8 +113,45 @@ import 'mint-ui/lib/style.css';
 样式引入可在公共地方。本项目在main.js里引入。。每次调用都不用特意再调用。。
 ```
 
+## 路由处理
 
-   -- 说明 --
+以下是 router/index.js 内容;
+
+```
+import Vue from 'vue'
+import Router from 'vue-router'
+
+Vue.use(Router)
+
+export default new Router({
+  mode: 'history',
+  routes: [
+    {
+      path: '/',
+      name: 'Hello',
+      component: (resolve) => { require(['@/views/first.vue'], resolve) }
+    },
+    {
+      path: '/demoList',
+      name: 'demoList',
+      component: (resolve) => { require(['@/views/demo.vue'], resolve) }
+    },
+    {
+      path: '/demoOne',
+      name: 'demoOne',
+      component: (resolve) => { require(['@/views/demoOne.vue'], resolve) }
+    },
+    {
+      path: '/demoTwo',
+      name: 'demoTwo',
+      component: (resolve) => { require(['@/views/demoTwo.vue'], resolve) }
+    }
+
+  ]
+})
+```
+
+ ##   -- 说明 --
  ```
 1、电脑上已安装node 及item。
 2、cd 到打算放置vue 的文件夹下。
